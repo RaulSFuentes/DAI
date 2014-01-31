@@ -1,0 +1,48 @@
+$def with (biblioheader, bibliocuerpo, bibliopie, bibliox, pagina, usuario)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>Práctica DAI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+	<div id="central">
+		<div id="header">
+			<div class="sitename"><a href="">
+			<div id = "textoheader"><br />$biblioheader[1] <br /> $biblioheader[2]</a> </div>
+			<div id = "formheader">			
+			<p>Bienvenido $usuario</p>
+			<p><a href="/desconectar">Desconectar</a>
+			<div> $pagina[0] -- $pagina[1] -- $pagina [2] </div>
+			</div>
+			</div>
+		</div>
+	   
+
+		<div id="content">
+			<div id="leftside">
+				 <div id="menu_simple">
+					<ul>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/formulario">Datos Web</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+					<li><a href="#">Link 5</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="rightside">
+				<form name="main" method="post">
+  				 $:bibliocuerpo[0].render()
+			</form>
+			</div>		
+			<div id="footer">
+				<p>$bibliopie[0]</p>
+			</div>
+		</div>
+	</div>
+	</body>
+	</html>

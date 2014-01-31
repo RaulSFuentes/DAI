@@ -1,0 +1,70 @@
+$def with (biblioheader, bibliocuerpo, bibliopie, pagina, noticias2,  usuario)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>Práctica DAI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	</head>
+	<body>
+	<div id="central">
+		<div id="header">
+			<div class="sitename"><a href="">
+			<div id = "textoheader"><br />$biblioheader[1] <br /> $biblioheader[2]</a> </div>
+			<div id = "formheader">	
+
+				<form name="main" method="post">
+  				 $:biblioheader[3].render()
+				</form>
+			
+			</div>
+			<div> $pagina[0] -- $pagina[1] -- $pagina[2] </div>
+			</div>
+		</div>
+	   
+
+		<div id="content">
+			<div id="leftside">
+				 <div id="menu_simple">
+					<ul>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/formulario">Datos Web</a></li>
+					<li><a href="/datos">Datos usuario</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+					<li><a href="#">Link 5</a></li>
+					</ul>
+				</div>
+
+				<div id="noticias>">
+
+					<p> $noticias2[0] </p>
+					<p> $:noticias2[1] </p>
+					<p> --------------- </p>
+					<p> $noticias2[2] </p>
+					<p> $:noticias2[3] </p>
+					<p> --------------- </p>
+					<p> $noticias2[4] </p>
+					<p> $:noticias2[5] </p>
+					<p> --------------- </p>
+					<p> $noticias2[6] </p>
+					<p> $:noticias2[7] </p>
+					<p> --------------- </p>
+					<p> $noticias2[8] </p>
+					<p> $:noticias2[9] </p>
+					<p> --------------- </p>
+				</div>
+			</div>
+
+			<div id="rightside">
+				$bibliocuerpo[0]
+			</div>		
+			<div id="footer">
+				<p>$bibliopie[0]</p>
+			</div>
+		</div>
+	</div>
+	</body>
+	</html>
+
+
