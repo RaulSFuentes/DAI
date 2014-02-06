@@ -1,7 +1,0 @@
-#!/usr/bin/python
-
-from mako.template import Template
-from mako.lookup import TemplateLookup
-
-mylookup = TemplateLookup(directories=['/docs'])
-mytemplate = Template("""<%include file="header.txt"/> hello world!""", lookup=mylookup)
